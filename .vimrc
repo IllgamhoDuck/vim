@@ -1,4 +1,5 @@
 " Basic setting ---------------{{{
+colorscheme ron
 set number
 set ts=8
 set sw=4
@@ -8,6 +9,25 @@ set cindent
 syntax on
 "set noswapfile
 "nohlsearch
+"}}}
+
+" search ------{{{
+nnoremap / /\v
+nnoremap <c-h><c-l> :set hlsearch<cr>
+nnoremap <c-h><c-l><c-l> :set hlsearch!<cr>
+nnoremap <c-i><c-n> :set incsearch<cr>
+nnoremap <c-i><c-n><c-n> :set incsearch!<cr>
+nnoremap <c-n><c-o><c-h> :noh<cr>
+"}}}
+
+" highlight --------------{{{
+highlight rightMargin term=bold ctermfg=blue guifg=blue
+nnoremap <leader>hl :match rightMargin /.\%>80v/<cr>
+highlight col8 ctermbg=grey guibg=grey
+nnoremap <leader>gl :match col8 /\%<8v.\%>7v/<cr>
+" Trailng whitespace
+nnoremap <leader>w :match error /\s\+$/<cr> 
+nnoremap <leader>noh :match<cr>
 "}}}
 
 " leader ---------------{{{
