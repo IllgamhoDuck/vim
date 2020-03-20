@@ -10,7 +10,6 @@ syntax on
 "set noswapfile
 "nohlsearch
 "}}}
-
 " search ------{{{
 nnoremap / /\v
 nnoremap <c-h><c-l> :set hlsearch<cr>
@@ -19,7 +18,6 @@ nnoremap <c-i><c-n> :set incsearch<cr>
 nnoremap <c-i><c-n><c-n> :set incsearch!<cr>
 nnoremap <c-n><c-o><c-h> :noh<cr>
 "}}}
-
 " highlight --------------{{{
 highlight rightMargin term=bold ctermfg=blue guifg=blue
 nnoremap <leader>hl :match rightMargin /.\%>80v/<cr>
@@ -27,19 +25,19 @@ highlight col8 ctermbg=grey guibg=grey
 nnoremap <leader>gl :match col8 /\%<8v.\%>7v/<cr>
 " Trailng whitespace
 nnoremap <leader>w :match error /\s\+$/<cr> 
+" more than 80 cols?
+nnoremap <leader>ch :match col8 /.\%>40v/<cr>
+" Trailng whitespace
 nnoremap <leader>noh :match<cr>
 "}}}
-
 " leader ---------------{{{
 let mapleader="-"
 let maplocalleader="\\"
 "}}}
-
 " vimrc editing ----------------{{{
 nnoremap <leader>ev :vs $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
-
 "autocmd ---------------{{{
 
 " iff command ------------------------{{{
@@ -55,14 +53,12 @@ augroup END
 " }}}
 
 "}}}
-
 " statusline setting for markdown ------------{{{
 augroup status_md
     autocmd!
     autocmd FileType markdown setlocal statusline=%f\ -\ filetype:%y
 augroup END
 " }}}
-
 " mapping ----------------{{{
 " normal mapping ------------{{{
 nnoremap <leader>l :ls<cr>:b<space>
@@ -87,3 +83,6 @@ onoremap a2h :<c-u>execute "normal! ?^--\\+$\r:nohlsearch\rg_vk0"<cr>
 onoremap in@ :<c-u>execute "normal! /\\S\\+@\\S\\+\r:nohlsearch\rvE"<cr>
 " }}}
 " }}}
+"GREP testing!!!---------{{{
+" nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")). " ."<cr>:copen<cr>
+"}}}
