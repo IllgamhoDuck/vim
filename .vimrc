@@ -1,3 +1,8 @@
+execute pathogen#infect()
+filetype plugin indent on
+
+set tags=./tags,./../tags,./*/tags
+
 " Basic setting ---------------{{{
 colorscheme ron
 set number
