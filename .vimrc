@@ -1,9 +1,9 @@
 execute pathogen#infect()
-filetype plugin indent on
+filetype plugin on
 
 set tags=./tags,./../tags,./*/tags
 
-" Basic setting ---------------{{{
+"Basic setting ---------------{{{
 colorscheme ron
 set number
 set ts=8
@@ -14,7 +14,7 @@ set cindent
 syntax on
 "set noswapfile
 "nohlsearch
-"}}}
+"}}}}
 " search ------{{{
 nnoremap / /\v
 nnoremap <c-h><c-l> :set hlsearch<cr>
