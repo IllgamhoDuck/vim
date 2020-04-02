@@ -3,6 +3,9 @@ filetype plugin on
 
 set tags=./tags,./../tags,./*/tags
 
+"Openbrower!-----{{{
+    nnoremap <leader>o :execute "OpenBrowserSearch " . shellescape(expand("<cWORD>"))<cr>
+"}}}
 "Basic setting ---------------{{{
 colorscheme ron
 set number

@@ -1,0 +1,2 @@
+=thisis doc			    *:duck*
+		"used for compilatoin"
