@@ -3,11 +3,15 @@ filetype plugin on
 
 set tags=./tags,./../tags,./*/tags
 
+"smooth scroll--------{{{
+map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+"}}}
 "Openbrower!-----{{{
     nnoremap <leader>o :execute "OpenBrowserSearch " . shellescape(expand("<cWORD>"))<cr>
 "}}}
 "Basic setting ---------------{{{
-colorscheme ron
+colorscheme codedark
 set number
 set ts=8
 set sw=4
